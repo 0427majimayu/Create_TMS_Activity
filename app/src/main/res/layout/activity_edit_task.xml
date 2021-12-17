@@ -40,7 +40,7 @@
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="72dp"
         tools:layout_editor_absoluteY="164dp"
-        app:layout_constraintTop_toBottomOf=""/>
+        app:layout_constraintTop_toBottomOf="parent"/>
 
     <EditText
         android:id="@+id/editTextTextPassword3"
@@ -85,6 +85,5 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        ltb/>
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
