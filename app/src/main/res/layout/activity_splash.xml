@@ -7,8 +7,36 @@
     tools:context=".SplashActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/badminton_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/splashText"
+        app:layout_constraintEnd_toStartOf="@+id/badminton_right"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        app:srcCompat="@drawable/badminton_left" />
+
+    <ImageView
+        android:id="@+id/badminton_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/splashText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/badminton_left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/badminton_right" />
+
+    <TextView
+        android:id="@+id/splashText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        android:text="badominton"
+        android:textColor="#00bfff"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/badminton_left" />
 </androidx.constraintlayout.widget.ConstraintLayout>
