@@ -13,8 +13,10 @@ WeeklyActivity : AppCompatActivity() {
         setContentView(R.layout.activity_weekly)
         weeklyButton = findViewById(R.id.weeklyButton)
 
+        weeklyButton.setOnClickListener(){
+            val intent = Intent(applicationContext,EditWeeklyActivity::class.java)//EditTaskActivity
+            startActivity(intent)
+        }
 
-        val intent = Intent(applicationContext,EditTaskActivity::class.java)
-        startActivity(intent)
     }
 }
