@@ -1,17 +1,20 @@
 package com.pineapple.create_tms_activity
 
+import android.app.Dialog
 import android.app.TimePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.CalendarContract
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.TimePicker
 import com.pineapple.create_tms_activity.databinding.ActivityEditWeeklyBinding
 import java.text.SimpleDateFormat
 import java.util.*
 
-class EditWeeklyActivity : AppCompatActivity() {
+class EditWeeklyActivity : AppCompatActivity(), TimePickerDialog.OnTimeSetListener {
 
     private lateinit var binding: ActivityEditWeeklyBinding
 
@@ -21,25 +24,34 @@ class EditWeeklyActivity : AppCompatActivity() {
         binding = ActivityEditWeeklyBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.startTimeEdit.setOnClickListener(){
-            showTimePickerDialog()
+        binding.startTimeEdit.setOnClickListener() {
+            val calendar: Calendar = Calendar.getInstance()
 
+            val cal = Calendar.getInstance()
+            val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
+                cal.set(Calendar.HOUR_OF_DAY, hour)
+                cal.set(Calendar.MINUTE, minute)
+                binding.startTimeEdit.setText(SimpleDateFormat("HH:mm").format(cal.time))
+            }
+
+            //タイムピッカーダイアログを生成および設定
+            TimePickerDialog(
+                this,
+                timeSetListener,
+                cal.get(Calendar.HOUR_OF_DAY),
+                cal.get(Calendar.MINUTE),
+                true
+            ).show()
         }
 
-        binding.returnButton.setOnClickListener(){
-            finish()
-        }
     }
 
-    fun showTimePickerDialog() {
-        val calendar: Calendar = Calendar.getInstance()
+    override fun onTimeSet(p0: TimePicker?, p1: Int, p2: Int) {
 
-        val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, i, i2 ->
-            calendar.set(Calendar.HOUR_OF_DAY, Calendar.HOUR,Calendar.MINUTE,)
-        }
-        TimePickerDialog(this,timeSetListener,calendar.get(Calendar.HOUR),calendar.get(Calendar.MINUTE),true).show()
-
-        binding.startTimeEdit.setText(SimpleDateFormat("HH/mm").format(timeSetListener))
     }
 
+//        binding.returnButton.setOnClickListener(){
+//            finish()
+//        }
 }
+

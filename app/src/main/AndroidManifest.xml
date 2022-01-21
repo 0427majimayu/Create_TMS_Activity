@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Create_TMS_Activity">
         <activity
+            android:name=".DialogFragment"
+            android:exported="false" />
+        <activity
             android:name=".EditWeeklyActivity"
             android:exported="false" />
         <activity
@@ -20,10 +23,10 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

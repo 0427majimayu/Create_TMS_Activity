@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Create_TMS_Activity</string>
+    <string name="stringformat">%02d:%02d</string>
 </resources>
