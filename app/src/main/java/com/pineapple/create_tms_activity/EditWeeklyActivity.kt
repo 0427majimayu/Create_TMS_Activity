@@ -14,7 +14,7 @@ import com.pineapple.create_tms_activity.databinding.ActivityEditWeeklyBinding
 import java.text.SimpleDateFormat
 import java.util.*
 
-class EditWeeklyActivity : AppCompatActivity(), TimePickerDialog.OnTimeSetListener {
+class EditWeeklyActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityEditWeeklyBinding
 
@@ -25,12 +25,12 @@ class EditWeeklyActivity : AppCompatActivity(), TimePickerDialog.OnTimeSetListen
         setContentView(binding.root)
 
         binding.startTimeEdit.setOnClickListener() {
-            val calendar: Calendar = Calendar.getInstance()
-
             val cal = Calendar.getInstance()
+
             val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
                 cal.set(Calendar.HOUR_OF_DAY, hour)
                 cal.set(Calendar.MINUTE, minute)
+
                 binding.startTimeEdit.setText(SimpleDateFormat("HH:mm").format(cal.time))
             }
 
@@ -43,15 +43,7 @@ class EditWeeklyActivity : AppCompatActivity(), TimePickerDialog.OnTimeSetListen
                 true
             ).show()
         }
-
     }
 
-    override fun onTimeSet(p0: TimePicker?, p1: Int, p2: Int) {
-
-    }
-
-//        binding.returnButton.setOnClickListener(){
-//            finish()
-//        }
 }
 
