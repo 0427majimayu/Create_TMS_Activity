@@ -11,10 +11,7 @@ import java.util.*
 open class Task (
     @PrimaryKey
     open var id: String = UUID.randomUUID().toString(),
-    open val subName: String,
-    open val time: String,
-    open val textName: String,
-    open val page: String,
+    open val subject: String,
     open val date: String
 
 ) : RealmObject()

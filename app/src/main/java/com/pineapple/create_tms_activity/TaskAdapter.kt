@@ -1,25 +1,30 @@
 package com.pineapple.create_tms_activity
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class TaskAdapter () : RecyclerView.Adapter<TaskAdapter.>(
+class TaskAdapter(
     private var taskList: MutableList<Task>?
-) {
+) : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomAdapter.CustomViewHolder {
-
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskAdapter.TaskViewHolder {
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.activity_task, parent, false)
+        return TaskViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: CustomAdapter.CustomViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: TaskAdapter.TaskViewHolder, position: Int) {
+        val item: Task = taskList?.get(position) ?: return
 
+        holder.titleText.text = item.subject
     }
 
-    override fun getItenCount(): Int = taskList?.size ?: 0
+    override fun getItemCount(): Int = taskList?.size ?: 0
 
     inner class TaskViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
+        val titleText: TextView = view.findViewById(R.id.textView)
     }
 }
 
