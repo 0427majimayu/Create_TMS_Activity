@@ -7,11 +7,10 @@ import android.widget.Button
 import android.widget.CalendarView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pineapple.create_tms_activity.databinding.ActivityTaskBinding
+import com.pineapple.create_tms_activity.databinding.ContentTaskBinding
 import io.realm.Realm
 
 class TaskActivity : AppCompatActivity() {
-    lateinit var calendarView: CalendarView
-    lateinit var finishButton: Button
 
     private lateinit var binding: ActivityTaskBinding
     private val realm: Realm by lazy {
@@ -33,20 +32,20 @@ class TaskActivity : AppCompatActivity() {
         val adapter = TaskAdapter(taskList)
 
         // TODO: RecyclerViewにAdapterをセット
-        binding.recyclerView.setHasFixedSize(true)
-        binding.recyclerView.layoutManager = LinearLayoutManager(this)
-        binding.recyclerView.adapter = adapter
+        binding.content.recyclerView.setHasFixedSize(true)
+        binding.content.recyclerView.layoutManager = LinearLayoutManager(this)
+        binding.content.recyclerView.adapter = adapter
 
 
         // TODO タスクを新しく追加するボタン
-         binding.fab.setOnClickListener() {
-             val intent = Intent(applicationContext,EditTaskActivity::class.java)
-             startActivity(intent)
-         }
-
-         finishButton.setOnClickListener() {
-            finish()
+        binding.fab.setOnClickListener() {
+            val intent = Intent(applicationContext, EditTaskActivity::class.java)
+            startActivity(intent)
         }
+
+//             binding_contant.finishButton.setOnClickListener() {
+//            finish()
+//        }
 
     }
 }

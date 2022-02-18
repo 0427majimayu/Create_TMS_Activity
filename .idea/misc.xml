@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/yu/AndroidStudioProjects/Create_TMS_Activity/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.37916666666666665" />
         <entry key="..\:/Users/yu/AndroidStudioProjects/Create_TMS_Activity/app/src/main/res/layout/activity_dialog_fragment.xml" value="0.1" />
         <entry key="..\:/Users/yu/AndroidStudioProjects/Create_TMS_Activity/app/src/main/res/layout/activity_edit_task.xml" value="0.24114583333333334" />
         <entry key="..\:/Users/yu/AndroidStudioProjects/Create_TMS_Activity/app/src/main/res/layout/activity_edit_weekly.xml" value="0.2546875" />
@@ -12,6 +13,7 @@
         <entry key="..\:/Users/yu/AndroidStudioProjects/Create_TMS_Activity/app/src/main/res/layout/activity_weekly.xml" value="0.2546875" />
         <entry key="..\:/Users/yu/AndroidStudioProjects/Create_TMS_Activity/app/src/main/res/layout/content_task.xml" value="0.33" />
         <entry key="..\:/Users/yu/AndroidStudioProjects/Create_TMS_Activity/app/src/main/res/layout/layout_task_activity.xml" value="0.25" />
+        <entry key="..\:/Users/yu/AndroidStudioProjects/Create_TMS_Activity/app/src/main/res/layout/task_layout_custom.xml" value="0.203125" />
         <entry key="..\:/Users/yu/AndroidStudioProjects/Create_TMS_Activity/app/src/main/res/layout/weekly_layout_custom.xml" value="0.25" />
       </map>
     </option>

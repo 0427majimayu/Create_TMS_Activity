@@ -31,7 +31,7 @@ class SplashActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-              val intent = Intent(applicationContext,WeeklyActivity::class.java)
+              val intent = Intent(applicationContext,TaskActivity::class.java)
                 startActivity(intent)
             }
 

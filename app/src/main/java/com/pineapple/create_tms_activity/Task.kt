@@ -11,9 +11,8 @@ import java.util.*
 open class Task (
     @PrimaryKey
     open var id: String = UUID.randomUUID().toString(),
-    open val subject: String,
-    open val date: String
-
+    open var subject: String = "",
+    open var date: String = ""
 ) : RealmObject()
 
 // TODO: RealmObjectを継承しよう
