@@ -22,6 +22,8 @@ class EditTaskActivity : AppCompatActivity() {
         binding = ActivityEditTaskBinding.inflate(layoutInflater)
 
         // TODO: https://github.com/masashihamaguchi/TodoSample/blob/master/app/src/main/java/com/masashi/todosample/MainActivity.kt
+        setContentView(binding.root)
+
         binding.EditButton.setOnClickListener {
 //            val date = binding.textInputEditText.text.toString()
 ////            if (subject != ""){

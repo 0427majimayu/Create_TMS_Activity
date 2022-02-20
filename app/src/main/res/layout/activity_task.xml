@@ -33,6 +33,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/screen_background_dark_transparent" />
+        app:srcCompat="@android:drawable/" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
