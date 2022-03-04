@@ -33,6 +33,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/" />
+        app:srcCompat="@drawable/ic_baseline_add_24" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
